@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CodeLabs1</string>
+    <string name="toast_btn">TOAST</string>
+    <string name="inc_btn">INCREMENT</string>
+    <string name="toast_msg">Welcome</string>
+    <string name="init_val">0</string>
+    <string name="title_activity_second">SecondActivity</string>
+</resources>

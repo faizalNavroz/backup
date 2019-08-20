@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data class="ViewpagerItemBinding2">
+
+        <variable
+            name="viewModel"
+            type="com.example.fordlabs.weatherapp.viewModel.WeatherViewModel" />
+    </data>
+
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="114dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="13dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:text="@={viewModel.temperature}"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/base"
+        android:layout_width="268dp"
+        android:layout_height="58dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="64dp"
+        android:text="@={viewModel.cityName}"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/timezone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView6"
+        android:layout_alignStart="@+id/base"
+        android:layout_marginStart="127dp"
+        android:layout_marginBottom="-24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:text="@={viewModel.weather}"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/base"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="134dp"
+        android:text="WEATHER"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp" />
+
+
+    <ImageView
+        style="@style/BackGroundImageView"
+        android:layout_width="250dp"
+        android:layout_height="211dp"
+        android:layout_alignEnd="@+id/base"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/weather"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/name"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_marginStart="-2dp"
+        android:layout_marginBottom="45dp"
+        android:text="HUMIDITY"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="114dp"
+        android:layout_height="29dp"
+        android:layout_above="@+id/name"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="12dp"
+        android:text="PRESSURE"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_alignEnd="@+id/name"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="68dp"
+        android:text="@={viewModel.humidity}"/>
+
+    <TextView
+        android:id="@+id/pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/humidity"
+        android:layout_alignEnd="@+id/name"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="62dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:text="@={viewModel.pressure}"/>
+
+</RelativeLayout>
+
+</layout>

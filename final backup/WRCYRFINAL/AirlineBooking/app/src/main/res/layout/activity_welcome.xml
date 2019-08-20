@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.fordlabs.airlinebooking.viewmodel.AirlineViewModel"/>
+
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.MainActivity">>
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="293dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="47dp"
+            android:layout_marginBottom="27dp"
+            android:text="AIRLINE BOOKING"
+            app:layout_constraintBottom_toTopOf="@+id/origin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/origin"
+            android:layout_width="299dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginBottom="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/destination"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            tools:text="Enter origin city" />
+
+        <EditText
+            android:id="@+id/destination"
+            android:layout_width="296dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="54dp"
+            android:text="Enter destination"
+            app:layout_constraintBottom_toTopOf="@+id/date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/origin" />
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="299dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginBottom="191dp"
+            android:text="Enter Date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="131dp"
+            android:layout_marginTop="72dp"
+            android:layout_marginEnd="165dp"
+            android:layout_marginBottom="71dp"
+            android:onClick="mainView"
+            android:text="SEARCH"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</layout>

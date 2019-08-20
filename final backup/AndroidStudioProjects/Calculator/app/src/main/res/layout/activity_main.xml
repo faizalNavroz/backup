@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="90dp"
+            android:layout_marginBottom="436dp"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="CALCULATOR " />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="84dp"
+            android:layout_marginBottom="6dp"
+            android:ems="10"
+            android:hint="Enter the first input"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/editText2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="85dp"
+            android:ems="10"
+            android:hint="Enter the second input"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText1" />
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="143dp"
+            android:onClick="calculate"
+            android:text="CALCULATE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="213dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="87dp"
+            android:layout_marginBottom="54dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calculate" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="210dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="90dp"
+            android:layout_marginBottom="11dp"
+            app:layout_constraintBottom_toTopOf="@+id/calculate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerText" />
+
+        <TextView
+            android:id="@+id/spinnerText"
+            android:layout_width="207dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="93dp"
+            android:text="Select the operation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
